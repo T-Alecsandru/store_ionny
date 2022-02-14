@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+    <!-- Modal -->
+    <div class="modal fade " id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="{{ produse.image.url }}" class="modal-img gallery-item" alt="modal img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-xl ">
+        <div class="row ">
+            {% for produse in all_pics %}
+                <div class="card col-lg-4 col-md-6 col-sm-12 mt-2">
+                    <img src="{{ produse.image.url }}" class="gallery-item card-img-top mt-1" alt="{{ product.name }}">
+                    <div class="card-body">
+                        <h5 class="descriere card-body card-title d-flex justify-content-center mt-1">{{ produse.name }} -
+                        {{ produse.price }} Lei</h5>
+                    <div class="card-text descriere2  mb-3">{{ produse.description }}</div>
+
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{#  </div>#}
+{#<div class="col-sm-2"></div>#}
+
+
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+    {% for contacte in contact2 %}
+
+        <div class="container">
+            <img src="{% static 'cover.jpg' %}" alt="cover">
+
+            <div class="centered">
+                <h1>Anunț!!!</h1>
+                <p>{{ contacte.anunt }}</p></div>
+        </div>
+        <div class="contact">
+
+            <h1 style="text-align:center">Date de contact </h1>
+
+            <p><i class="bi bi-telephone-fill"></i><strong>Telefon:</strong> +{{ contacte.phone }}</p>
+
+            <p><i class="bi bi-envelope-heart"></i><strong>E-mail:</strong> <a
+                    style="text-decoration: none; color: black"
+                    href="mailto:{{ contacte.email }}">{{ contacte.email }} </a>
+
+            <p><i class="bi bi-geo-alt-fill"></i><strong> Adresa:</strong> {{ contacte.address }}</p>
+
+            <p><a href="https://www.facebook.com/craftsbyionny/?ref=page_internal"><i
+                    class="bi bi-facebook"></i>
+            </a></p>
+        </div>
+        </div>
+
+
+
+
+
+
+    {% endfor %}
+
+
+{% endblock %}
