@@ -121,12 +121,6 @@ span:nth-child(2n) {
     color: #3fabe6;
 }
 
-index-img {
-    border-radius: 10px;
-    border-color: black;
-    border: solid;
-}
-
 .shadow {
     text-shadow: 1px 2px white;
 }
@@ -192,16 +186,18 @@ img {
     text-align: center;
     /*background-color: #da4ce8;*/
     color: black;
-
+    font-weight: 700;
     box-sizing: border-box;
     width: 65%;
     height: auto;
-    background-color: #f1dcf8;
+    /*background-color: #f1dcf8;*/
     margin-right: auto;
     margin-left: auto;
     border-radius: 80px;
     border-style: solid;
     box-shadow: 2px 2px #c5c6c7;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(139,174,214,1) 100%);
 
 
 }
@@ -222,5 +218,7 @@ img {
 
 .container p {
     font-weight: 800;
-    text: 2vw
+    text: 2vw;
+    color: rebeccapurple;
+    text-shadow: 6px 1px 16px rgba(138,73,218,0.7);
 }
